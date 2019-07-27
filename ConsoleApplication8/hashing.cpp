@@ -1,3 +1,10 @@
+/*******************************************************************
+*   hashing.cpp
+*   Steven Powell
+*   Programming Assignment 4: Hashing
+*
+*   This program is entirely my own work
+*******************************************************************/
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
