@@ -2,7 +2,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <math.h>
-//#include <conio.h>
+#include <conio.h>
 #include <string.h>
 #define TABLESIZE     100
 #define KEYSIZE       4
@@ -92,7 +92,13 @@ int ProbeDec_3(char *key)
 {
     int dHashVal;
 
-    dHashVal = (int)((key[0]) + key[1] / TABLESIZE);
+    dHashVal = int ((key[0]) + key[1] / TABLESIZE);
+	/*
+    cout << "ProbeDec_3: "
+        << key[0] << " + " << key[1]
+        << " / " << TABLESIZE
+        << " = " << hashVal << endl;
+	*/
 
     return dHashVal;
 }
@@ -211,7 +217,6 @@ int main()
             if(!inFile->is_open())
             {
                 cout << "Unable to open data file. Program terminating\n";
-				system("pause");
                 return 1;
             }
             count = 0;     // Initialize collision counter
